@@ -14,7 +14,7 @@ SCOPE = [
 CREDS = Credentials.from_service_account_file('cred.json')
 SCOPE_CREDS =CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPE_CREDS)
-SHEET = GSPREAD_CLIENT.open('love_sandwitches')
+SHEET = GSPREAD_CLIENT.open('love_sandwiches')
 
 sales = SHEET.worksheet('sales')
 data = sales.get_all_values()
